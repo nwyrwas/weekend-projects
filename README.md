@@ -9,11 +9,8 @@ This repository contains 4 projects that progressively build on core DSA pattern
 | Project | DSA Pattern | Status |
 |---------|-------------|--------|
 | URL Shortener | Arrays & Hashmaps | 🔲 50% Complete |
-
 | Log Analyzer CLI | Two Pointers & Sliding Window | 🔲 Not Started |
-
 | Browser History Manager | Linked Lists & Stacks | 🔲 Not Started |
-
 | File System Navigator | Trees & Recursion | 🔲 Not Started |
 
 ## 🛠️ Projects
