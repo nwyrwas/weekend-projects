@@ -8,7 +8,7 @@ This repository contains 4 projects that progressively build on core DSA pattern
 
 | Project | DSA Pattern | Status |
 |---------|-------------|--------|
-| URL Shortener | Arrays & Hashmaps | 🔲 50% Complete |
+| URL Shortener | Arrays & Hashmaps | ✅ Complete |
 | Log Analyzer CLI | Two Pointers & Sliding Window | 🔲 Not Started |
 | Browser History Manager | Linked Lists & Stacks | 🔲 Not Started |
 | File System Navigator | Trees & Recursion | 🔲 Not Started |
@@ -28,6 +28,14 @@ A URL shortening service similar to bit.ly that demonstrates hashmap operations 
 - Expand short codes back to original URLs
 - Duplicate URL detection
 - CLI interface
+
+**Bonus Features:**
+- URL validation (http/https only)
+- Expiration dates for short URLs
+- Click analytics tracking (count & timestamps)
+- Custom short codes (user-specified aliases)
+- Data persistence to JSON file
+- Rate limiting (10 requests per 60 seconds)
 
 **Run it:**
 ```bash

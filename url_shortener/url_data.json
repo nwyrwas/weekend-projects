@@ -1,0 +1,21 @@
+{
+  "counter": 1,
+  "url_to_short": {
+    "https://www.youtube.com/watch?v=3EGpBQ9xeCo": "a"
+  },
+  "short_to_url": {
+    "a": "https://www.youtube.com/watch?v=3EGpBQ9xeCo"
+  },
+  "expiration": {
+    "a": 1770766897.8364139
+  },
+  "analytics": {
+    "a": {
+      "clicks": 1,
+      "timestamps": [
+        "2026-02-10T15:41:55.235405"
+      ]
+    }
+  },
+  "custom_codes": []
+}
