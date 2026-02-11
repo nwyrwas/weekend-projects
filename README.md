@@ -18,24 +18,24 @@ This repository contains 4 projects that progressively build on core DSA pattern
 ### 1. URL Shortener
 A URL shortening service similar to bit.ly that demonstrates hashmap operations for O(1) lookup and storage.
 
-**Why This Project?**
-URL shorteners like bit.ly are a classic example of hashmaps in production. I wanted to understand how O(1) lookups make these services fast, and how bidirectional mapping (URL → code and code → URL) works in practice.
+**<u>Why This Project?</u>**
+- URL shorteners like bit.ly are a classic example of hashmaps in production. I wanted to understand how O(1) lookups make these services fast, and how bidirectional mapping (URL → code and code → URL) works in practice.
 
-**My Approach:**
-I started with the core data structure—two hashmaps for instant lookups in both directions. Then I implemented Base62 encoding to generate short, unique codes. Once the basics worked, I added production-style features like expiration, analytics, and rate limiting to make it feel like a real service.
+**<u>My Approach:</u>**
+- I started with the core data structure—two hashmaps for instant lookups in both directions. Then I implemented Base62 encoding to generate short, unique codes. Once the basics worked, I added production-style features like expiration, analytics, and rate limiting to make it feel like a real service.
 
-**Key Concepts:**
+**<u>Key Concepts:</u>**
 - Hashmap for bidirectional URL mapping
 - Base62 encoding for short code generation
 - Collision handling
 
-**Features:**
+**<u>Features:</u>**
 - Shorten any URL to a unique code
 - Expand short codes back to original URLs
 - Duplicate URL detection
 - CLI interface
 
-**Bonus Features:**
+**<u>Bonus Features:</u>**
 - URL validation (http/https only)
 - Expiration dates for short URLs
 - Click analytics tracking (count & timestamps)
@@ -43,10 +43,13 @@ I started with the core data structure—two hashmaps for instant lookups in bot
 - Data persistence to JSON file
 - Rate limiting (10 requests per 60 seconds)
 
-**Run it:**
+**<u>Run it:</u>**
 ```bash
 cd url_shortener
 python main.py
+
+# Run tests
+pytest tests/ -v
 ```
 
 ---
