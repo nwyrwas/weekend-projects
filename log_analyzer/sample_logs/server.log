@@ -1,0 +1,23 @@
+2024-01-15 10:23:45 INFO Server started on port 8080
+2024-01-15 10:23:46 DEBUG Database connection established
+2024-01-15 10:24:01 ERROR Connection timeout to API service
+2024-01-15 10:24:02 WARN Retrying connection (attempt 1/3)
+2024-01-15 10:24:15 ERROR Connection failed after 3 attempts
+2024-01-15 10:25:00 INFO User login: user_123
+2024-01-15 10:25:30 DEBUG Cache miss for key: products_list
+2024-01-15 10:26:00 ERROR Database query timeout
+2024-01-15 10:26:01 ERROR Database query timeout
+2024-01-15 10:26:02 ERROR Database query timeout
+2024-01-15 10:26:03 WARN High database load detected
+2024-01-15 10:27:00 INFO Scheduled backup started
+2024-01-15 10:28:00 ERROR Disk space low on /var/log
+2024-01-15 10:28:30 ERROR Disk space low on /var/log
+2024-01-15 10:29:00 INFO Backup completed successfully
+2024-01-15 10:30:00 DEBUG Memory usage: 75%
+2024-01-15 10:31:00 WARN Memory usage approaching threshold
+2024-01-15 10:32:00 ERROR Out of memory error in worker thread
+2024-01-15 10:32:01 ERROR Out of memory error in worker thread
+2024-01-15 10:32:02 ERROR Service crashed: worker_1
+2024-01-15 10:33:00 INFO Service restarted: worker_1
+2024-01-15 10:34:00 DEBUG Health check passed
+2024-01-15 10:35:00 INFO User logout: user_123

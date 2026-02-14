@@ -1,0 +1,199 @@
+2024-01-15 08:00:00 INFO Server starting up
+2024-01-15 08:00:01 INFO Loading configuration from /etc/app/config.yml
+2024-01-15 08:00:02 DEBUG Initializing database connection pool (max: 50)
+2024-01-15 08:00:03 INFO Database connection established to db-primary.internal:5432
+2024-01-15 08:00:04 INFO Redis cache connected at redis.internal:6379
+2024-01-15 08:00:05 INFO Server ready on port 8080
+2024-01-15 08:01:00 INFO User login: user_101 from 192.168.1.10
+2024-01-15 08:01:15 DEBUG Cache hit for key: homepage_data
+2024-01-15 08:01:30 INFO User login: user_102 from 192.168.1.25
+2024-01-15 08:02:00 DEBUG Processing request: GET /api/products
+2024-01-15 08:02:01 DEBUG Cache miss for key: products_list
+2024-01-15 08:02:02 DEBUG Database query executed in 45ms
+2024-01-15 08:02:30 INFO User login: user_103 from 10.0.0.5
+2024-01-15 08:03:00 DEBUG Processing request: POST /api/orders
+2024-01-15 08:03:01 INFO New order created: order_5001
+2024-01-15 08:03:30 DEBUG Health check passed
+2024-01-15 08:04:00 INFO Scheduled job started: daily_report_generation
+2024-01-15 08:04:15 DEBUG Fetching data for report (range: 24h)
+2024-01-15 08:04:30 INFO Report generated: /reports/daily_2024-01-15.pdf
+2024-01-15 08:05:00 DEBUG Memory usage: 42%
+2024-01-15 08:05:30 DEBUG CPU usage: 15%
+2024-01-15 08:06:00 INFO User login: user_104 from 172.16.0.8
+2024-01-15 08:06:30 DEBUG Processing request: GET /api/users/104/profile
+2024-01-15 08:07:00 WARN Slow query detected: SELECT * FROM orders (took 2.3s)
+2024-01-15 08:07:30 DEBUG Processing request: PUT /api/users/104/settings
+2024-01-15 08:08:00 INFO User logout: user_101
+2024-01-15 08:08:30 DEBUG Cache eviction: 15 keys removed (LRU)
+2024-01-15 08:09:00 INFO New deployment detected: v2.4.1
+2024-01-15 08:09:01 INFO Rolling restart initiated
+2024-01-15 08:09:02 WARN Worker 1 draining connections
+2024-01-15 08:09:05 WARN Worker 2 draining connections
+2024-01-15 08:09:10 INFO Worker 1 restarted with v2.4.1
+2024-01-15 08:09:15 INFO Worker 2 restarted with v2.4.1
+2024-01-15 08:09:20 INFO Deployment complete: v2.4.1
+2024-01-15 08:10:00 DEBUG Processing request: GET /api/products/42
+2024-01-15 08:10:30 DEBUG Cache hit for key: product_42
+2024-01-15 08:11:00 INFO User login: user_105 from 192.168.2.100
+2024-01-15 08:11:30 DEBUG Processing request: POST /api/cart/add
+2024-01-15 08:12:00 ERROR Connection timeout to payment gateway (attempt 1/3)
+2024-01-15 08:12:01 WARN Retrying payment gateway connection
+2024-01-15 08:12:03 ERROR Connection timeout to payment gateway (attempt 2/3)
+2024-01-15 08:12:04 WARN Retrying payment gateway connection
+2024-01-15 08:12:06 ERROR Connection timeout to payment gateway (attempt 3/3)
+2024-01-15 08:12:07 ERROR Payment gateway unreachable - circuit breaker opened
+2024-01-15 08:12:08 ERROR Order processing failed for user_105: payment unavailable
+2024-01-15 08:12:30 WARN Payment gateway circuit breaker: OPEN state
+2024-01-15 08:13:00 ERROR Connection timeout to payment gateway (attempt 1/3)
+2024-01-15 08:13:01 ERROR Connection timeout to payment gateway (attempt 2/3)
+2024-01-15 08:13:02 ERROR Connection timeout to payment gateway (attempt 3/3)
+2024-01-15 08:13:03 ERROR Payment gateway unreachable - circuit breaker opened
+2024-01-15 08:13:30 WARN 5 payment requests queued due to gateway outage
+2024-01-15 08:14:00 INFO Payment gateway connection restored
+2024-01-15 08:14:01 INFO Processing queued payment requests
+2024-01-15 08:14:15 INFO Order completed: order_5002 for user_105
+2024-01-15 08:14:30 DEBUG Payment gateway latency: 150ms (normal)
+2024-01-15 08:15:00 DEBUG Memory usage: 58%
+2024-01-15 08:15:30 DEBUG CPU usage: 22%
+2024-01-15 08:16:00 INFO User login: user_106 from 10.0.1.15
+2024-01-15 08:16:30 INFO User login: user_107 from 10.0.1.20
+2024-01-15 08:17:00 DEBUG Processing request: GET /api/search?q=laptop
+2024-01-15 08:17:01 DEBUG Elasticsearch query executed in 120ms
+2024-01-15 08:17:30 DEBUG Processing request: GET /api/search?q=phone
+2024-01-15 08:18:00 WARN Elasticsearch cluster health: YELLOW (1 unassigned shard)
+2024-01-15 08:18:30 DEBUG Processing request: POST /api/reviews
+2024-01-15 08:19:00 INFO New review posted for product_42 by user_106
+2024-01-15 08:19:30 DEBUG Sending notification email to user_42 (product owner)
+2024-01-15 08:20:00 DEBUG Memory usage: 61%
+2024-01-15 08:20:30 WARN Memory usage approaching threshold (>60%)
+2024-01-15 08:21:00 DEBUG GC triggered: freed 150MB
+2024-01-15 08:21:30 DEBUG Memory usage: 45% (after GC)
+2024-01-15 08:22:00 INFO Scheduled job started: cache_warmup
+2024-01-15 08:22:15 DEBUG Warming cache: 250 product keys loaded
+2024-01-15 08:22:30 INFO Cache warmup complete
+2024-01-15 08:23:00 DEBUG Processing request: GET /api/dashboard
+2024-01-15 08:23:01 WARN Slow query detected: aggregation pipeline (took 3.1s)
+2024-01-15 08:23:30 DEBUG Processing request: GET /api/analytics
+2024-01-15 08:24:00 INFO User logout: user_103
+2024-01-15 08:24:30 DEBUG Session cleanup: 2 expired sessions removed
+2024-01-15 08:25:00 DEBUG Health check passed
+2024-01-15 08:25:30 INFO Traffic spike detected: 150 req/s (normal: 80 req/s)
+2024-01-15 08:26:00 INFO Auto-scaling: adding 2 workers (total: 6)
+2024-01-15 08:26:15 INFO Worker 5 started
+2024-01-15 08:26:20 INFO Worker 6 started
+2024-01-15 08:26:30 DEBUG Load balancer updated: 6 active workers
+2024-01-15 08:27:00 DEBUG Processing request: POST /api/orders (batch)
+2024-01-15 08:27:01 INFO Batch order processing: 15 orders
+2024-01-15 08:27:15 DEBUG Database transaction committed (15 inserts)
+2024-01-15 08:27:30 INFO Batch order processing complete
+2024-01-15 08:28:00 ERROR Database connection pool exhausted (50/50 connections in use)
+2024-01-15 08:28:01 ERROR Database query failed: too many connections
+2024-01-15 08:28:02 ERROR Database query failed: too many connections
+2024-01-15 08:28:03 ERROR Database query failed: too many connections
+2024-01-15 08:28:04 WARN Database connection pool: waiting queue has 12 requests
+2024-01-15 08:28:05 ERROR Database query failed: too many connections
+2024-01-15 08:28:06 ERROR Database query failed: too many connections
+2024-01-15 08:28:07 ERROR Database connection pool exhausted (50/50 connections in use)
+2024-01-15 08:28:08 ERROR Request failed: GET /api/products - database unavailable
+2024-01-15 08:28:09 ERROR Request failed: POST /api/cart - database unavailable
+2024-01-15 08:28:10 ERROR Request failed: GET /api/users/107/orders - database unavailable
+2024-01-15 08:28:15 WARN Returning cached data for 8 requests (stale: 5min)
+2024-01-15 08:28:30 INFO Database connections freed: 20 idle connections released
+2024-01-15 08:28:31 INFO Database connection pool: 30/50 in use (recovering)
+2024-01-15 08:29:00 DEBUG Database connection pool: 18/50 in use (stable)
+2024-01-15 08:29:30 DEBUG Processing request: GET /api/products (resumed)
+2024-01-15 08:30:00 DEBUG Memory usage: 72%
+2024-01-15 08:30:01 WARN Memory usage critical (>70%)
+2024-01-15 08:30:15 DEBUG GC triggered: freed 200MB
+2024-01-15 08:30:30 DEBUG Memory usage: 51% (after GC)
+2024-01-15 08:31:00 INFO Traffic normalizing: 90 req/s
+2024-01-15 08:31:30 INFO Auto-scaling: removing 1 worker (total: 5)
+2024-01-15 08:32:00 DEBUG Worker 6 stopped gracefully
+2024-01-15 08:32:30 DEBUG Processing request: GET /api/notifications
+2024-01-15 08:33:00 INFO Push notification sent: 45 users
+2024-01-15 08:33:30 DEBUG WebSocket connections active: 28
+2024-01-15 08:34:00 DEBUG Processing request: PUT /api/users/106/profile
+2024-01-15 08:34:30 INFO Profile updated for user_106
+2024-01-15 08:35:00 DEBUG Health check passed
+2024-01-15 08:35:30 INFO Scheduled job started: log_rotation
+2024-01-15 08:35:45 INFO Log file rotated: server.log -> server.log.2024-01-14
+2024-01-15 08:36:00 INFO Log rotation complete
+2024-01-15 08:36:30 DEBUG Processing request: DELETE /api/cart/item/15
+2024-01-15 08:37:00 DEBUG Cart updated for user_107
+2024-01-15 08:37:30 DEBUG Processing request: POST /api/checkout
+2024-01-15 08:38:00 INFO Payment processed: $149.99 for user_107
+2024-01-15 08:38:01 INFO Order completed: order_5003 for user_107
+2024-01-15 08:38:30 DEBUG Inventory updated: product_15 (stock: 42 -> 41)
+2024-01-15 08:39:00 DEBUG Sending order confirmation email to user_107
+2024-01-15 08:39:30 INFO Email sent successfully: order_confirmation_5003
+2024-01-15 08:40:00 DEBUG Memory usage: 48%
+2024-01-15 08:40:30 DEBUG CPU usage: 18%
+2024-01-15 08:41:00 INFO User login: user_108 from 192.168.3.50
+2024-01-15 08:41:30 DEBUG Processing request: GET /api/products?category=electronics
+2024-01-15 08:42:00 DEBUG Cache hit for key: category_electronics
+2024-01-15 08:42:30 ERROR External API failure: shipping rate calculator returned 503
+2024-01-15 08:42:31 WARN Falling back to default shipping rates
+2024-01-15 08:43:00 ERROR External API failure: shipping rate calculator returned 503
+2024-01-15 08:43:01 ERROR External API failure: shipping rate calculator returned 503
+2024-01-15 08:43:02 WARN Shipping API circuit breaker: monitoring
+2024-01-15 08:43:30 INFO Shipping API recovered
+2024-01-15 08:44:00 DEBUG Processing request: GET /api/recommendations/108
+2024-01-15 08:44:01 DEBUG ML model inference: 23ms
+2024-01-15 08:44:30 DEBUG Processing request: POST /api/wishlist/add
+2024-01-15 08:45:00 DEBUG Health check passed
+2024-01-15 08:45:30 INFO User logout: user_106
+2024-01-15 08:46:00 DEBUG Session cleanup: 1 expired session removed
+2024-01-15 08:46:30 INFO Scheduled job started: metrics_export
+2024-01-15 08:46:45 INFO Metrics exported to Prometheus endpoint
+2024-01-15 08:47:00 DEBUG Processing request: GET /api/products/trending
+2024-01-15 08:47:01 DEBUG Aggregation query executed in 85ms
+2024-01-15 08:47:30 INFO User login: user_109 from 172.16.2.30
+2024-01-15 08:48:00 DEBUG Processing request: GET /api/flash-sale
+2024-01-15 08:48:01 WARN Flash sale starting: high traffic expected
+2024-01-15 08:48:30 INFO Traffic spike detected: 300 req/s (normal: 80 req/s)
+2024-01-15 08:48:31 INFO Auto-scaling: adding 4 workers (total: 9)
+2024-01-15 08:48:35 INFO Worker 6 started
+2024-01-15 08:48:36 INFO Worker 7 started
+2024-01-15 08:48:37 INFO Worker 8 started
+2024-01-15 08:48:38 INFO Worker 9 started
+2024-01-15 08:49:00 ERROR Rate limit exceeded for IP 10.0.5.99 (suspected bot)
+2024-01-15 08:49:01 ERROR Rate limit exceeded for IP 10.0.5.100 (suspected bot)
+2024-01-15 08:49:02 ERROR Rate limit exceeded for IP 10.0.5.101 (suspected bot)
+2024-01-15 08:49:03 WARN Blocked 3 IPs for rate limiting violations
+2024-01-15 08:49:15 ERROR Database connection pool exhausted (50/50 connections in use)
+2024-01-15 08:49:16 ERROR Database query failed: too many connections
+2024-01-15 08:49:17 ERROR Database query failed: too many connections
+2024-01-15 08:49:18 ERROR Request failed: POST /api/orders - database unavailable
+2024-01-15 08:49:19 ERROR Request failed: POST /api/orders - database unavailable
+2024-01-15 08:49:20 ERROR Request failed: GET /api/flash-sale - database unavailable
+2024-01-15 08:49:25 WARN Emergency: enabling read-only mode
+2024-01-15 08:49:30 INFO Database connections freed: 30 connections released
+2024-01-15 08:49:45 INFO Read-only mode disabled, normal operations resumed
+2024-01-15 08:50:00 DEBUG Database connection pool: 25/50 in use (recovering)
+2024-01-15 08:50:30 DEBUG Memory usage: 78%
+2024-01-15 08:50:31 ERROR Out of memory error in worker 7
+2024-01-15 08:50:32 ERROR Out of memory error in worker 8
+2024-01-15 08:50:33 WARN Workers 7,8 restarting due to OOM
+2024-01-15 08:50:45 INFO Worker 7 restarted
+2024-01-15 08:50:50 INFO Worker 8 restarted
+2024-01-15 08:51:00 DEBUG Memory usage: 55% (after worker restart)
+2024-01-15 08:51:30 INFO Flash sale traffic normalizing: 150 req/s
+2024-01-15 08:52:00 INFO Auto-scaling: removing 2 workers (total: 7)
+2024-01-15 08:52:30 DEBUG Processing request: GET /api/orders/user/109
+2024-01-15 08:53:00 INFO Flash sale ended
+2024-01-15 08:53:30 INFO Traffic normalized: 75 req/s
+2024-01-15 08:54:00 INFO Auto-scaling: removing 2 workers (total: 5)
+2024-01-15 08:54:30 DEBUG Processing request: POST /api/reviews
+2024-01-15 08:55:00 DEBUG Health check passed
+2024-01-15 08:55:30 INFO User logout: user_108
+2024-01-15 08:56:00 INFO User logout: user_109
+2024-01-15 08:56:30 DEBUG Session cleanup: 3 expired sessions removed
+2024-01-15 08:57:00 INFO Scheduled job started: database_backup
+2024-01-15 08:57:15 DEBUG Backup in progress: 45% complete
+2024-01-15 08:57:30 DEBUG Backup in progress: 78% complete
+2024-01-15 08:57:45 INFO Database backup completed: backup_2024-01-15_0857.sql.gz (2.3GB)
+2024-01-15 08:58:00 DEBUG Backup uploaded to S3: s3://backups/db/2024-01-15/
+2024-01-15 08:58:30 INFO Backup verification passed (checksum match)
+2024-01-15 08:59:00 DEBUG Memory usage: 44%
+2024-01-15 08:59:30 DEBUG CPU usage: 12%
+2024-01-15 09:00:00 INFO Hourly report: 157 requests served, 28 errors, 99.2% uptime

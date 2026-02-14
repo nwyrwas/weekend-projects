@@ -1,0 +1,24 @@
+# Virtual environments
+venv/
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# OS files
+.DS_Store
+
+# IDE files
+.vscode/
+.idea/
+
+# Generated files
+*.png
+!public/*.png
+*.csv
+url_shortener/url_data.json
+
+# Environment variables
+.env

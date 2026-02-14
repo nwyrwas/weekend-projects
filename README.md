@@ -9,7 +9,7 @@ This repository contains 4 projects that progressively build on core DSA pattern
 | Project | DSA Pattern | Status |
 |---------|-------------|--------|
 | URL Shortener | Arrays & Hashmaps | ✅ Complete |
-| Log Analyzer CLI | Two Pointers & Sliding Window | 🔲 Not Started |
+| Log Analyzer CLI | Two Pointers & Sliding Window | ✅ Complete |
 | Browser History Manager | Linked Lists & Stacks | 🔲 Not Started |
 | File System Navigator | Trees & Recursion | 🔲 Not Started |
 
@@ -51,6 +51,49 @@ python main.py
 # Run tests
 pytest tests/ -v
 ```
+
+---
+
+### 2. Log Analyzer CLI
+A command-line tool that analyzes log files to find patterns, errors, and trends using sliding window techniques.
+
+**<u>Why This Project?</u>**
+- Real-world systems generate massive log files. I wanted to understand how sliding window and two pointer techniques can efficiently detect error spikes and patterns without loading entire files into memory - the same patterns used in production monitoring tools.
+
+**<u>My Approach:</u>**
+- I started by building a parser to turn raw log lines into structured data. Then I implemented a sliding window with a deque to detect error spikes in configurable time windows. For pattern detection, I used a hashmap to count normalized error messages. Once the core worked, I added multi-format support, anomaly detection, and data visualization.
+
+**<u>Key Concepts:</u>**
+- Sliding window for time-based error spike detection
+- Two pointers for efficient time range analysis
+- Hashmap for frequency counting and pattern detection
+
+**<u>Features:</u>**
+- Parse standard log file format
+- Detect error spikes within configurable time windows
+- Find repeated error patterns
+- Generate summary statistics
+
+**<u>Bonus Features:</u>**
+- Real-time log tailing (like tail -f) with color-coded output
+- Export analysis to JSON/CSV reports
+- Error rate visualization with matplotlib
+- Multi-format support (Apache, Nginx, JSON logs)
+- Anomaly detection (unusual error rates, volume spikes, time gaps)
+
+**<u>Run it:</u>**
+```bash
+cd log_analyzer
+source venv/bin/activate
+python3 cli.py sample_logs/server.log --errors --spikes 5 --patterns --anomalies --visualize
+
+# Run tests
+pytest tests/ -v
+```
+
+**<u>Sample Dashboard Output:</u>**
+
+![Log Analysis Dashboard](public/dashboard.png)
 
 ---
 

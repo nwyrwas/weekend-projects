@@ -1,0 +1,10 @@
+{"timestamp": "2024-01-15T10:23:45", "level": "INFO", "message": "Application starting"}
+{"timestamp": "2024-01-15T10:23:46", "level": "INFO", "message": "Database connected"}
+{"timestamp": "2024-01-15T10:24:00", "level": "DEBUG", "message": "Loading config from /etc/app/config.yml"}
+{"timestamp": "2024-01-15T10:24:01", "level": "ERROR", "message": "Failed to connect to Redis at 127.0.0.1:6379"}
+{"timestamp": "2024-01-15T10:24:02", "level": "ERROR", "message": "Failed to connect to Redis at 127.0.0.1:6379"}
+{"timestamp": "2024-01-15T10:24:03", "level": "ERROR", "message": "Failed to connect to Redis at 127.0.0.1:6379"}
+{"timestamp": "2024-01-15T10:24:10", "level": "WARN", "message": "Falling back to in-memory cache"}
+{"timestamp": "2024-01-15T10:25:00", "level": "INFO", "message": "HTTP server listening on port 3000"}
+{"timestamp": "2024-01-15T10:26:00", "level": "ERROR", "message": "Unhandled exception in /api/orders"}
+{"timestamp": "2024-01-15T10:27:00", "level": "ERROR", "message": "Unhandled exception in /api/orders"}
