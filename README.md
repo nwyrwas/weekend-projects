@@ -4,7 +4,7 @@ A collection of practical projects built to reinforce Data Structures & Algorith
 
 ## 📋 Overview
 
-This repository contains 4 projects that progressively build on core DSA patterns:
+This repository contains 5 projects that progressively build on core DSA patterns:
 
 | Project | DSA Pattern | Status |
 |---------|-------------|--------|
@@ -12,6 +12,7 @@ This repository contains 4 projects that progressively build on core DSA pattern
 | Log Analyzer CLI | Two Pointers & Sliding Window | ✅ Complete |
 | Browser History Manager | Linked Lists & Stacks | 🔲 Not Started |
 | File System Navigator | Trees & Recursion | 🔲 Not Started |
+| Smart Commit CLI | String Processing & Exponential Backoff | ✅ Complete |
 
 ## 🛠️ Projects
 
@@ -94,6 +95,56 @@ pytest tests/ -v
 **<u>Sample Dashboard Output:</u>**
 
 ![Log Analysis Dashboard](public/dashboard.png)
+
+---
+
+### 3. Smart Commit CLI
+An AI-powered CLI tool that analyzes staged git changes and generates meaningful commit messages following the Conventional Commits v1.0.0 specification using the Anthropic Claude API.
+
+**<u>Why This Project?</u>**
+- Writing good commit messages is tedious but important. I wanted to build a practical developer tool while exploring string processing for diff parsing/truncation, retry patterns with exponential backoff for API reliability, and config file merging with hashmap-style object lookups.
+
+**<u>My Approach:</u>**
+- I started by building the git integration layer to capture and truncate staged diffs efficiently using line-based slicing. Then I built the prompt engineering module to transform diffs into structured conventional commit messages. For the API layer, I implemented retry logic with exponential backoff (1s, 2s, 4s) to handle transient failures gracefully. Finally, I wired it all together with a polished CLI using yargs, chalk for color-highlighted output, and inquirer for interactive prompts.
+
+**<u>Key Concepts:</u>**
+- String processing for diff parsing and line-based truncation
+- Exponential backoff retry pattern (3 attempts, doubling delay)
+- Config merging with file/environment variable fallback chain
+
+**<u>Features:</u>**
+- Analyze staged git changes and generate conventional commit messages
+- Color-highlighted commit message display in terminal
+- Interactive accept/abort/edit workflow
+- Configurable via `~/.smartcommitrc.json` or environment variables
+
+**<u>Bonus Features:</u>**
+- Dry run mode (preview without committing)
+- Force specific commit types (`--type feat`)
+- Multi-language commit messages (`--lang es`)
+- Model override (`--model`)
+- Interactive config setup wizard
+- Diff truncation with warnings when exceeding max lines
+- API retry with exponential backoff (3 attempts)
+
+**<u>Run it:</u>**
+```bash
+cd smart_commit
+export ANTHROPIC_API_KEY=sk-your-key-here
+npm install && npm run build
+
+# Generate a commit message
+git add <files>
+node dist/index.js
+
+# Or with flags
+node dist/index.js --dry-run
+node dist/index.js --type feat
+node dist/index.js --lang es
+
+# Run tests
+npm test
+```
 
 ---
 
