@@ -4,7 +4,7 @@ A collection of practical projects built to reinforce Data Structures & Algorith
 
 ## 📋 Overview
 
-This repository contains 5 projects that progressively build on core DSA patterns:
+This repository contains 6 projects that progressively build on core DSA patterns and production engineering skills:
 
 | Project | DSA Pattern | Status |
 |---------|-------------|--------|
@@ -13,6 +13,7 @@ This repository contains 5 projects that progressively build on core DSA pattern
 | Browser History Manager | Linked Lists & Stacks | 🔲 Not Started |
 | File System Navigator | Trees & Recursion | 🔲 Not Started |
 | Smart Commit CLI | String Processing & Exponential Backoff | ✅ Complete |
+| Express API Boilerplate | System Design & Architecture | ✅ Complete |
 
 ## 🛠️ Projects
 
@@ -148,3 +149,49 @@ npm test
 
 ---
 
+### 4. Express API Boilerplate
+A production-grade REST API boilerplate built with Node.js, TypeScript, Express, PostgreSQL, and Prisma ORM. Features JWT authentication, role-based access control, comprehensive testing, and Docker support.
+
+**<u>Why This Project?</u>**
+- I wanted to go beyond algorithms and build the kind of backend architecture that real production APIs use. This project was about understanding how all the pieces fit together — authentication flows, middleware pipelines, layered architecture, and containerized deployments.
+
+**<u>My Approach:</u>**
+- I started with a modular architecture separating routes, controllers, services, and data access. I implemented JWT-based auth with access/refresh token rotation and role-based authorization. Then I built out a full middleware stack (Helmet, CORS, rate limiting, request IDs, input sanitization, structured logging with Pino). Finally, I added Docker multi-stage builds, a CI/CD pipeline with GitHub Actions, and comprehensive testing with Jest and Supertest.
+
+**<u>Key Concepts:</u>**
+- Layered architecture (routes → controllers → services → Prisma ORM)
+- JWT access/refresh token authentication with httpOnly cookies
+- Role-based access control (USER, ADMIN, MODERATOR)
+
+**<u>Features:</u>**
+- Full auth flow (register, login, refresh, logout)
+- User CRUD with role-based permissions
+- PostgreSQL with Prisma ORM, migrations, and seeding
+- Comprehensive middleware stack (security, logging, validation)
+
+**<u>Bonus Features:</u>**
+- Docker & Docker Compose for development and production
+- GitHub Actions CI/CD pipeline (lint, type-check, test, build)
+- Jest + Supertest with 80%+ coverage enforcement
+- Structured JSON logging with Pino and sensitive data redaction
+- Input sanitization and rate limiting
+- Environment variable validation with Zod
+
+**<u>Run it:</u>**
+```bash
+cd Boilerplate
+npm install
+cp .env.example .env
+
+# Start with Docker Compose
+docker-compose up -d
+
+# Or start locally (requires PostgreSQL)
+npm run db:migrate
+npm run dev
+
+# Run tests
+npm test
+```
+
+---
