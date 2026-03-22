@@ -15,6 +15,12 @@ This repository contains 6 projects that progressively build on core DSA pattern
 | Smart Commit CLI | String Processing & Exponential Backoff | ✅ Complete |
 | Express API Boilerplate | System Design & Architecture | ✅ Complete |
 
+### 🔗 Related Projects
+
+| Project | Description | Repo |
+|---------|-------------|------|
+| Personal Dashboard | Real-time dashboard with weather, GitHub stats, and news — built with Next.js, TypeScript, and Tailwind CSS | [personal-dashboard](https://github.com/nwyrwas/personal-dashboard) |
+
 ## 🛠️ Projects
 
 ### 1. URL Shortener
